@@ -4,7 +4,6 @@ if [ -e /usr/share/terminfo/x/xterm-256color ]; then
 else
     export TERM='xterm-color'
 fi
-
 if [ "$uname -o" == "Cygwin" ]; then
     alias apt-get="apt-cyg"
 fi
@@ -12,10 +11,10 @@ fi
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33'
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export LS_OPTS='--color=auto'
 
+export LS_OPTS='--color=auto'
 alias ls='ls ${LS_OPTS}'
 alias ll="'ls -al'
 
-PS1='\e[33;1m(¡û£à-¢¥)¡ù \e[31m\W\e[0m $ '
+PS1='\e[37m\h \e[33;1m(âˆ©ï½€-Â´)âŠƒ \e[31m\W\e[0m $ '
 
