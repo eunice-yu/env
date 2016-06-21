@@ -14,7 +14,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 export LS_OPTS='--color=auto'
 alias ls='ls ${LS_OPTS}'
-alias ll="'ls -al'
+alias ll='ls -al'
 
 PS1='\e[37m\h \e[33;1m(∩｀-´)⊃ \e[31m\W\e[0m $ '
 
