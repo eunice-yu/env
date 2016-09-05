@@ -16,5 +16,16 @@ export LS_OPTS='--color=auto'
 alias ls='ls ${LS_OPTS}'
 alias ll='ls -al'
 
-PS1='\e[37m\h \e[33;1m(∩｀-´)⊃ \e[31m\W\e[0m $ '
+red=$(tput setaf 1)
+yellow=$(tput setaf 3)
+green=$(tput setaf 2)
+blue=$(tput setaf 4)
+bold=$(tput bold)
+reset=$(tput sgr0)
+#PS1='\[$green$bold\]\h\[$reset\]:\[$red$bold\]\W\[$yellow$bold\](∩｀-´)⊃  $\[$reset$bold\] '
+PS1='\[$yellow$bold\](∩｀-´)⊃ \[$red$bold\]\W \[$reset\]$'
+#P
+#PS1='\[$red$bold\]\w\[$reset$bold\]$ '
+#PS1='\e[37m\h \e[33;1m(∩｀-´)⊃ \e[31m\W\e[0m $'
+
 
