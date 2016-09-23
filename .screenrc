@@ -1,7 +1,7 @@
 # ===============================================================
 # File:               $HOME/.screenrc
 # Purpose:            Setup file for program "(GNU) screen"
-# written by:         Sven Guckes 
+# written by:         Sven Guckes
 # Latest update:      Sat Feb 16 06:00:00 MET 2002
 # Latest user version:  screen-3.9.11    [020215]
 # Latest beta version:  screen-3.9.11beta6 [020206]
@@ -39,8 +39,8 @@
 # screen -t WWW       5 links http://www.math.fu-berlin.de/~guckes/
 #
 
-termcapinfo xterm* ti@:te@
 term screen-256color
+term xterm-256color
 # ===============================================================
 # VARIABLES - Boolean values (on/off)
 # ===============================================================
@@ -52,10 +52,17 @@ term screen-256color
 # nethack             on            # default: off
   startup_message     off           # default: on
  termcap  xterm      'AF=\E[3%dm:AB=\E[4%dm'
- terminfo xterm      'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
+# terminfo xterm      'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
 # Matthias Kopfermann                               [020222]:
   termcapinfo linux "ve=\E[?25h\E[?17;0;64c" # red
   vbell               off           # default: ???
+# Enable mouse scrolling and scroll bar history scrolling
+  termcapinfo xterm* ti@:te@
+  altscreen on
+# molokai
+  attrcolor b ".I"
+  termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E38;5;%dm'
+  defbce "on"
 #
 # ===============================================================
 # VARIABLES - Number values
@@ -333,7 +340,7 @@ bind _ resize max
 bind "^[[1;2D" left
 bind "^[[1;2C" right
 bind "^[[1;5D" resize +5
-bind "^[[1;5C" reisze -5 
+bind "^[[1;5C" reisze -5
 #
 # I suggest that you don't change the bidnings for
 # 'H' ("log") and 'M' ("monitor") as they are really
