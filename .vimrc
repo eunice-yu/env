@@ -33,7 +33,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 syntax on
 set t_Co=256
-highlight Normal guibg=black guifg=white
+"highlight Normal guibg=black guifg=white
 set background=dark
 colorscheme molokai
 
@@ -45,9 +45,15 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
 
+"set root dir for ctrlp
+let g:ctrlp_user_command = ['cscope.files', 'cat %s/cscope.files']
+let g:ctrlp_root_markers = ['cscope.files']
+
 set smartindent
 set hlsearch
 set nu
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set ic
+set paste
