@@ -1,5 +1,5 @@
 #!/bin/bash
-ARGS='-iname *.cpp -o -iname *.cc -o -iname *.h -o -iname *.java'
+ARGS='-iname *.c -o -iname *.cpp -o -iname *.cc -o -iname *.h -o -iname *.java -o -iname *.py'
 ADDITIONAL_FILES="*.mk *.xml *.ninja *.idl *.gypi *.gyp *.in `echo $PRJDIR_EXTS`"
 PRJDIRS=".prjdirs"
 set -f
@@ -36,4 +36,5 @@ echo "Listing files in $DIRS"
 find $DIRS $ARGS | grep -v 'unittest' > cscope.files
 
 sort -u cscope.files -o cscope.files
-
+cscope -b 
+ctags -L cscope.files
