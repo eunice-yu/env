@@ -57,3 +57,6 @@ set shiftwidth=4
 set expandtab
 set ic
 set paste
+
+set visualbell
+set t_vb=
